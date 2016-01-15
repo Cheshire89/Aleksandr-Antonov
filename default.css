@@ -523,7 +523,7 @@ form .field:hover label {
   color: #FFF;
 }
 #send{
-  width: 25%;
+  width:40%;
   margin:0 auto;
 }
 
@@ -536,9 +536,8 @@ form input[type="submit"] {
   -webkit-appearance: none;
   text-transform: uppercase;
   padding: 13px 50px;
-  font-size: 0.8em;
+  font-size: 1em;
   text-align: center;
-  letter-spacing: 0.1em;
   font-family:Raleway, sans-serif;
   font-weight: 300;
   -webkit-transition: all 333ms ease-in-out;
@@ -579,6 +578,7 @@ form input[type="submit"]:focus {
 }
 
 @media only screen and (min-width : 641px) {
+
 .fixed{
   display: none;
 }
@@ -638,7 +638,7 @@ form input[type="submit"]:focus {
 }
 
 #email_btn{
-  display: block;
+  display: none;
 }
 
 }
@@ -653,7 +653,7 @@ form input[type="submit"]:focus {
 }
 
 form input[type="submit"] {
-  width: 25%;
+  width: 100%;
   font-size:1.4em;
 }
 
@@ -758,7 +758,10 @@ form input[type="submit"] {
 }
 
 #email_btn{
+  width: 15%;
   display: block;
+  text-align: center;
+  font-size: 1em;
 }
   
 }
