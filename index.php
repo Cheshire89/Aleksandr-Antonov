@@ -145,8 +145,14 @@ include("data.php");
 	<section id="four">
     <div id="projects" class="content"><h2>Projects</h2>
     	<div class="container">
-    	
-    		
+	    	<div class="project">
+	    		<img src="img/project1.jpg" alt="Sloane Gallery Website">
+	    	</div>
+	    	<div class="project">
+	    		<img src="img/project2.jpg" alt="Aleksandr Antonov Interactive Resume">
+	    	</div>
+	    	<div class="project">
+	    	</div>
     	</div>
    	</div>
    	</section>
