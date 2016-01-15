@@ -577,6 +577,16 @@ form input[type="submit"]:focus {
   display: none;
 }
 
+.project{
+  margin:5% auto;
+  width: 90%;
+  box-shadow: 5px 5px 10px rgba(0,0,225,0.1);
+}
+
+.project img{
+  width: 100%;
+}
+
 @media only screen and (min-width : 641px) {
 
 .fixed{
@@ -641,6 +651,11 @@ form input[type="submit"]:focus {
   display: none;
 }
 
+.project{
+  margin:2.5%;
+  float:left;
+  width: 45%;
+}
 }
 
 @media only screen and (min-width : 1024px) {
@@ -768,7 +783,6 @@ form input[type="submit"] {
   margin:2.5%;
   float: left;
   width: 30%;
-  box-shadow: 5px 5px 10px rgba(0,0,225,0.1);
 }
 .project:hover{
   box-shadow: 5px 5px 10px rgba(0,0,225,0.5);
