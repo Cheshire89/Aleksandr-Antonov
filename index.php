@@ -1,5 +1,5 @@
 <?php
-include("data.php");
+include("php/data.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,7 +17,7 @@ include("data.php");
 <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-<link rel="stylesheet" type="text/css" href="default.css">
+<link rel="stylesheet" type="text/css" href="styles/default.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.js"></script>
@@ -26,22 +26,33 @@ include("data.php");
 <div id="wrapper">
 <header id="header">
   <nav>
-  <div id="logo">
-    <h1><?php echo $details["name"]?></h1>
-    <h3>Interactive Resume</h3>
-  </div>
-  <div id="cssmenu" class="align-center">
-  			<a class="glyphicon-list" id="menu_btn"></a>
-    <ul>
-	    <?php
-	  		foreach($navLinks as $link){
-	  			echo '<li><a href="#'.$link.'">'.ucfirst($link).'</a></li>';
-	  		}
-	  	?>
-    </ul>
-    </nav>
-  </div>
-  </header> <!--End of header -->
+	  <div id="logo">
+	    <h1><?php echo $details["name"]?></h1>
+	    <h3>Interactive Resume</h3>
+	  </div>
+	  <div id="cssmenu" class="align-center">
+	    <ul>
+		    <?php
+		  		foreach($navLinks as $link){
+		  			echo '<li><a href="#'.$link.'">'.ucfirst($link).'</a></li>';
+		  		}
+		  	?>
+	    </ul>
+	   </div>
+	    <div id="mobile" class="mobile_menu">
+	     <select onchange="location = this.options[this.selectedIndex].value;">
+	      <option value="#" selected>MENU</option>
+	      <option value="#">----------------------------------</option>
+	      <?php
+	      		foreach ($navLinks as $link) {
+	      			echo '<option value="#'.$link.'">'.ucfirst($link).'</option>';
+	      		}
+	      ?>
+	     </select>
+	     <!--<script type="text/javascript" src="scripts/mobile_menu_selection.js"></script>-->
+	    </div>
+   </nav>
+</header> <!--End of header -->
   <section id="one">
     <div id="profile" class="content">
     	<h2>Profile</h2>
@@ -205,5 +216,5 @@ include("data.php");
     </div>
   </footer>
 </div> <!-- End of wrapper -->
-<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="scripts/main.js"></script>
 </html>
