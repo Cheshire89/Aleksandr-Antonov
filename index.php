@@ -186,7 +186,7 @@ include("php/data.php");
 	  <a href="#name" id="email_btn" class="btn green">Send Email</a>
     </div>
     <div id="contact-email" class="content"><h2>E-mail</h2>
-    <form id="hire" method="POST" onsubmit="sendEmail()">
+    <form id="hire" method="POST" onsubmit="php\send.php">
 	      <div class="field name-box">
 		        <input type="text" id="name" name="name" placeholder="Greetings!" required />
         		<label for="name">Name</label>

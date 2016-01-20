@@ -1,5 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway);
 @import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700);
+@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
 
 body{
    background: url("../img/background.jpg") no-repeat center center fixed; 
@@ -61,14 +62,15 @@ section{
 }
 
 #logo h1{
+  font-family: 'Abril Fatface', cursive;
   color:#2c7383;
-  font-size:3em;
+  font-size:4em;
   font-weight: 700;
   margin: 2% 0 0 0;
 }
 
 #logo h3{
-  font-size: 2vw;
+  font-size: 2em;
   margin:0;
 }
 #navigation{
