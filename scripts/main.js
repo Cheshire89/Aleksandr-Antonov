@@ -146,13 +146,21 @@ $(document).ready(function(){
 			$("#cssmenu").removeClass("fixed");
 		}
 
+	});
+
+  $(window).scroll(function(){
+    var scrollPos = $(window).scrollTop(); //Our  postition relative to window
+    
+
     if(scrollPos >= mobileOffset){
       $("#mobile").addClass("fixed");
     }else{
       $("#mobile").removeClass("fixed");
     }
 
-	});
+  });
+
+
 });
 
 /*------------Form----------------------*/
