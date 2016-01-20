@@ -54,19 +54,19 @@ $eduaction = array(
 	"name" => "Community College of Denver",
 	"atending" => "2007-2010",
 	"location" => $details['location'],
-	'description' => "Copmpleted several multimedia and design courses including;
-					Multimedia and Design,
-					Web Development, 
-					and AP Art. Awarded upon graduation \"Outstanding Achevements in Visual Arts\""
+	'description' => "The education was mainly focused on graphic design using Adobe products 
+					(Photoshop, Illustrator, InDesign). Along side I took a lot of other Art courses including;
+					2D and 3D art, digital and film photography, art history. It was also the place where I was
+					introduced to C++ and Java programming which set my desicion to graduate with Computer Science
+					Degree."
 		),
+
 	$ucd = array(
 	"name" => "Univercity of Colorado at Denver",
 	"atending" => "2010-Present",
 	"location" => $details['location'],
-	'description' => "Copmpleted several multimedia and design courses including;
-					Multimedia and Design,
-					Web Development, 
-					and AP Art. Awarded upon graduation \"Outstanding Achevements in Visual Arts\""
+	'description' => "Currently Im a Junior at the UCD working on my Computer Sciense Degree. I also take interest in other
+					engeneering courses as my knowlege and curiousity increases."
 		)
 	);
 
@@ -74,7 +74,7 @@ $careers = array(
 	$SGA = array(
 	"name" => "Sloane Gallery of Art",
 	"position" => "Asistant Director",
-	"atending" => "2010-2016",
+	"atending" => "2010-Present",
 	"description" => "No Description Yet"
 	),
 
