@@ -1,6 +1,7 @@
 <?php
-function sendEmail(){
-	if (preg_match('/[^\w]g/', $_POST['name']) == -1) {
+
+
+if (preg_match('/[^\w]g/', $_POST['name']) == -1) {
 	$name = $_POST['name'];
 } else {
 	echo "The name field may only contain letters";
@@ -23,11 +24,11 @@ $subject = "from Aleksandr Antonov.com";
 $header = $name." ".$email;
 
 $messages = 'Name: '.$name.' \r\n  E-mail: '.$email.' \r\n Message: '.$message;
-	if(mail($to, $subject, $messages, $headers)){
+if(mail($to, $subject, $messages, $headers)){
 		echo "Email was sent";
 	} else {
 		echo "Email wan NOT sent";
 	}
-}
+
 
 ?>
