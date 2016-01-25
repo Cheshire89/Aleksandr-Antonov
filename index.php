@@ -25,13 +25,13 @@ include("php/data.php");
 </head>
 <div id="wrapper">
 <header id="header">
-  <nav>
-	  <div id="logo">
-	    <h1><?php echo $details["name"]?></h1>
+	<div id="logo">
+	    <img src="img/logo.png" alt="logo">
 	    <h3>Interactive Resume</h3>
-	  </div>
+	 </div>
+  <nav>
 	  <div id="cssmenu" class="align-center">
-	    <ul>
+	    <ul id="menu">
 		    <?php
 		  		foreach($navLinks as $link){
 		  			echo '<li><a href="#'.$link.'">'.ucfirst($link).'</a></li>';
@@ -52,6 +52,7 @@ include("php/data.php");
 	     <!--<script type="text/javascript" src="scripts/mobile_menu_selection.js"></script>-->
 	    </div>
    </nav>
+  
 </header> <!--End of header -->
   <section id="one">
     <div id="profile" class="content">
@@ -186,7 +187,7 @@ include("php/data.php");
 	  <a href="#name" id="email_btn" class="btn green">Send Email</a>
     </div>
     <div id="contact-email" class="content"><h2>E-mail</h2>
-    <form id="hire" method="POST" onsubmit="php\send.php">
+    <form id="hire" method="POST" action="php\send.php">
 	      <div class="field name-box">
 		        <input type="text" id="name" name="name" placeholder="Greetings!" required />
         		<label for="name">Name</label>

@@ -1,6 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway);
 @import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700);
-@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
 
 
 
@@ -12,15 +11,25 @@ body{
   background-size: cover;
 }
 header, section, footer{
-  width:80%;
+  width:100%;
   margin:1% auto;
+}
+
+header,section, footer{
   background-color:white;
   box-shadow: 5px 5px 10px rgba(0,0,225,0.1);
-  border-bottom:1px solid #ccc;
   border-radius:5px;
 }
-section{
-  min-height:100px;
+
+p{
+  color:#000;
+}
+nav{
+  padding:0;
+}
+.nav-placeholder{
+  width: 100%;
+  overflow: hidden;
 }
 
 #cssmenu{
@@ -35,46 +44,49 @@ section{
   margin:2% 0;
 }
 .content h2{
-  /*font-family: Raleway, sans-serif;*/
-  font-family: 'Libre Baskerville', serif;
-  color:#2c7383;
   font-size:3em;
   font-weight: 400;
-  text-align: center;
   width: 90%;
   margin:0 auto;
   padding-top:6%;
   padding-bottom: 1%;
   border-bottom: 1px solid #999;
-}  
+} 
+
+.content h2 {
+  font-family: 'Libre Baskerville', serif;
+  text-align: center;
+  color:#2c7383;
+}
 #wrapper{
   width:100%;
   margin:0 auto;
 }
 
 #logo{
+  width: 70%;
   margin:2% auto;
   padding-top:0.5%;
 }
 
-#logo h1, #logo h3, #footer h4{
+#logo h3{
   font-family: Raleway, sans-serif;
   font-weight: normal;
   text-align:center;
-}
-
-#logo h1{
-  font-family: 'Abril Fatface', cursive;
-  color:#2c7383;
-  font-size:4em;
-  font-weight: 700;
-  margin: 2% 0 0 0;
+  font-size: 4vw;
 }
 
 #logo h3{
-  font-size: 2em;
-  margin:0;
+  margin:0 0 0 5%;
+
 }
+
+#logo img{
+  width: 100%;
+  margin:8% 0 2% 5%;
+}
+
+
 #navigation{
   width:50%;
   margin:0 auto;
@@ -101,6 +113,7 @@ section{
   color: #FFF;
 }
 .fixed {
+  display: block;
   background-color: #fff;
   z-index: 1;
   width: 100% !important;
@@ -112,11 +125,8 @@ section{
 
 .mobile_menu {
     text-align: center;
-    overflow-x:hidden;
-    padding-left:10px;
-    padding-right:10px;
-    padding-top:10px;
-    padding-bottom:10px;
+    overflow:hidden;
+    padding:10px;
     min-height:10px;
 }
 .mobile_menu select {
@@ -127,27 +137,25 @@ section{
     margin-bottom:10px;
 }
 
-.fixed{
-  display: block;
-}
-
 #footer h4{
+  text-align: center;
   font-size:0.8em;
   padding: 1%;
   margin: 0;
 }
-
+#contact{
+  overflow: hidden;
+}
 
 #contact ul{
   list-style: none;
   width: 80%;
-  padding:0;
-  margin:8% auto;
-  margin-bottom: 4%;
+  margin:4% auto 8% auto;
 }
 #contact ul li{
   display: inline;
   text-align: justify;
+
 }
 #contact ul li a{
   text-decoration: none;
@@ -159,14 +167,6 @@ section{
 }
 #contact ul li a img {
   width: 15%;
-}
-#contact a p{
-  width: auto;
-  margin: 0;
-  font-family: "Helvetica","Arial",sans-serif;
-  font-weight: normal;
-  color: #999;
-  text-decoration: none;
 }
 
 .aboutMe img{
@@ -258,6 +258,7 @@ section{
   width: 90%;
   margin:2.5% 5%;
   display: block;
+  padding-bottom:2%;
 }
 
 #tools ul{
@@ -537,6 +538,30 @@ form input[type="submit"]:focus {
 }
 
 @media only screen and (min-width : 641px) {
+header, section, footer{
+  width:80%;
+  margin:1% auto;
+}
+
+#logo{
+  width: 50%;
+  margin:2% auto;
+}
+
+#logo h3{
+  text-align:center;
+  font-size: 3vw;
+}
+
+#logo h3{
+  margin:0 0 0 5%;
+
+}
+
+#logo img{
+  width: 100%;
+  margin:8% 0 2% 5%;
+}
 
 .fixed{
   display: block;
@@ -595,6 +620,33 @@ form input[type="submit"]:focus {
 }
 
 @media only screen and (min-width : 1024px) {
+header, section, footer{
+  width:80%;
+  margin:1% 0px 1% 20px;
+}
+
+#logo{
+  width: 40%;
+  margin:2% auto;
+  padding-top:0.5%;
+}
+
+#logo h3{
+  font-family: Raleway, sans-serif;
+  font-weight: normal;
+  text-align:center;
+  font-size: 2.5vw;
+}
+
+#logo h3{
+  margin:0 0 0 5%;
+
+}
+
+#logo img{
+  width: 100%;
+  margin:8% 0 2% 5%;
+}
 
 form input[type="submit"] {
   width: 100%;
@@ -603,6 +655,8 @@ form input[type="submit"] {
 
 #contact ul{
   width: 50%;
+  padding:0px;
+  margin-bottom: 4%;
 }
 
 .row{
@@ -652,7 +706,7 @@ form input[type="submit"] {
   display:block;
 }
 
-/**********************/
+
 #cssmenu,
 #cssmenu ul,
 #cssmenu ul li,
@@ -702,11 +756,11 @@ form input[type="submit"] {
 }
 #cssmenu > ul > li > a {
   z-index: 2;
-  padding: 18px 25px 12px 25px;
+  padding: 22px 28px 14px 28px;
   font-size: 15px;
   font-weight: 400;
   text-decoration: none;
-  color: #444444;
+  color: #000;
   -webkit-transition: all .2s ease;
   -moz-transition: all .2s ease;
   -ms-transition: all .2s ease;
@@ -807,8 +861,6 @@ form input[type="submit"] {
   width: 100%;
   margin:0 auto;
 }
-
-  
 }
 
 

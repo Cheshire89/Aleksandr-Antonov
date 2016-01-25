@@ -133,35 +133,8 @@ ss.STEPS = 25;
 
 ss.addEvent(window,"load",ss.fixAllLinks);
 
-$(document).ready(function(){
-	var navOffset = $("#cssmenu").offset().top;
-  var mobileOffset = $("#mobile").offset().top;
-	
-	$(window).scroll(function(){
-		var scrollPos = $(window).scrollTop(); //Our  postition relative to window
-		
-		if(scrollPos >= navOffset){
-			$("#cssmenu").addClass("fixed");
-		}else{
-			$("#cssmenu").removeClass("fixed");
-		}
-
-	});
-
-  $(window).scroll(function(){
-    var scrollPos = $(window).scrollTop(); //Our  postition relative to window
-    
-
-    if(scrollPos >= mobileOffset){
-      $("#mobile").addClass("fixed");
-    }else{
-      $("#mobile").removeClass("fixed");
-    }
-
-  });
 
 
-});
 
 /*------------Form----------------------*/
 // Input Lock
@@ -213,4 +186,23 @@ $("#email_btn").on("click",function(){
   $("#contact-email").addClass("visible");
   $("#email_btn").fadeOut("fast","linear");
   $("#name").focus()
+});
+
+$(document).ready(function(){
+var navOffset = $("nav").offset().top;
+$("nav").wrap('<div class="nav-placeholder"></div>');
+$(".nav-placeholder").height($("nav").outerHeight());
+
+
+  $(window).scroll(function(){
+
+    var scrollPos = $(window).scrollTop();
+
+    if(scrollPos >= navOffset){
+      $("nav").addClass("fixed");
+    }else if(scrollPos < navOffset){
+      $("nav").removeClass("fixed");
+    }
+
+  });
 });
