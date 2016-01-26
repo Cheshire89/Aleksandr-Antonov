@@ -465,7 +465,7 @@ form .field textarea.focused + label {
 form .field input[type="text"].focused + label,
 form .field textarea.focused + label {
   /*ICON*/
-  color: #fcff74;
+  color: #333;
 }
 form .field:hover label {
   width: 18%;

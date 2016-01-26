@@ -143,11 +143,11 @@ $('textarea').blur(function () {
         $this = $(this);
         if ( this.value != '' ) {
           $this.addClass('focused');
-          //$('textarea + label + span').css({'opacity': 1});
+          // $('textarea + label + span').css({'opacity': 1});
         }
         else {
           $this.removeClass('focused');
-          //$('textarea + label + span').css({'opacity': 0});
+          $('textarea + label + span').css({'opacity': 0});
         }
     });
 });
@@ -157,10 +157,10 @@ $('#hire .field:first-child input').blur(function () {
         $this = $(this);
         if ( this.value != '' && this.value.indexOf('@') < 0) {
           $this.addClass('focused');
-         // $('.field:first-child input + label + span').css({'opacity': 1});
+          // $('.field:first-child input + label + span').css({'opacity': 1});
         }else {
           $this.removeClass('focused');
-          //$('.field:first-child input + label + span').css({'opacity': 0});
+          $('.field:first-child input + label + span').css({'opacity': 0});
           
         }
     });
@@ -171,11 +171,11 @@ $('#hire .field:nth-child(2) input').blur(function () {
         $this = $(this);
         if ( this.value != '') {
           $this.addClass('focused');
-          //$('.field:nth-child(2) input + label + span').css({'opacity': 1});
+          // $('.field:nth-child(2) input + label + span').css({'opacity': 1});
         }
         else {
           $this.removeClass('focused');
-          //$('.field:nth-child(2) input + label + span').css({'opacity': 0});
+          $('.field:nth-child(2) input + label + span').css({'opacity': 0});
         }
     });
 });
@@ -185,6 +185,12 @@ $("#email_btn").on("click",function(){
   $("#email_btn").fadeOut("fast","linear");
   $("#name").focus()
 });
+$("#send_btn").on("click",function(){
+  $("#contact-email").addClass("visible");
+  $("#email_btn").fadeOut("fast","linear");
+  $("#name").focus()
+});
+
 
 $(document).ready(function(){
 var navOffset = $("nav").offset().top;
