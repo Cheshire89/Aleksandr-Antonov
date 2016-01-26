@@ -23,30 +23,33 @@ function parametersSet($name,$email,$message){
 
 function setName($data){
 	if(empty($data)){
-		$nameErr = "The Name is Required";
+			echo "The Name is Required";
 	}else {
 		$name = test_input($data);
 		if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-      	$nameErr = "Only letters and white space allowed"; 
+      		echo "Only letters and white space allowed"; 
     	}
 	}
+	return $name;
 }
 function setEmail($data){
 	if(empty($data)){
-		$emailErr = "The E-mail is Required";
+		echo "The E-mail is Required";
 	}else{
 		$email = test_input($data);
 		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      	$emailErr = "Invalid email format"; 
+      		echo "Invalid email format"; 
     	}
 	}
+	return $email;
 }
 function setMessage($data){
 	if(empty($data)){
-    	$messageErr = "E-mail could not be send without message";
+    	echo "E-mail could not be send without message";
     } else {
     	$message = test_input($data);
     }
+    return $message;
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST")	{
