@@ -42,10 +42,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")	{
 	$messages = "Name: ".$name."\r\n  E-mail: ".$email."\r\n Message: ".$message;
     $headers = "From:" . $name;
 
-    if(!empty($name) && !empty($email) && !empty($message)){
+    if(!empty($name) && !empty($email) && !filter_var($email, FILTER_VALIDATE_EMAIL) && !empty($message)){
     	mail($to, $subject, $messages, $headers);
-    	echo '<h3 id="set">Your message had been sent<h3>'; 
-    }
+    	echo '<h5 id="set">Your message had been sent<h5>'; 
+    } 
 ?>
 <style type="text/css">
 #set{
