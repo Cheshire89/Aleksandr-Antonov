@@ -186,30 +186,7 @@ include("php/data.php");
 	    </ul>
 	  <a href="#name" id="email_btn" class="btn green">Send Email</a>
     </div>
-    <div id="contact-email" class="content"><h2>E-mail</h2>
-    <form id="hire" method="POST" action="php\send.php">
-	      <div class="field name-box">
-		        <input type="text" id="name" name="name" placeholder="Greetings!" required />
-        		<label for="name">Name</label>
-		        <span class="glyphicon-ok"></span>
-	      </div>
-
-	      <div class="field email-box">
-		        <input type="text" type="email" id="email" name="email" placeholder="Name@email.com" required />
-		        <label for="email">Email</label>
-		        <span class="glyphicon-ok"></span>
-	      </div>
-
-	      <div class="field msg-box">
-		        <textarea id="msg" rows="4" name="message" placeholder="How may I help you ?" required /></textarea>
-		        <label for="msg">Msg</label>
-		        <span class="glyphicon-ok"></span>
-	      </div>
-	      <div id="send">
-	      <input class="button" type="submit" value="Send" />
-	      </div>
-  </form>
-    </div>
+    <?php include("php/send.php"); ?>
   </section>
   <footer>
     <div id="footer">

@@ -155,11 +155,9 @@ $('textarea').blur(function () {
 $('#hire .field:first-child input').blur(function () {
     $('#hire .field:first-child input').each(function () {
         $this = $(this);
-        if ( this.value != '' ) {
+        if ( this.value != '' && this.value.indexOf('@') < 0) {
           $this.addClass('focused');
           $('.field:first-child input + label + span').css({'opacity': 1});
-        }else if(this.value.indexOf('@')<0){
-          $('.field:first-child input').text("Please make sure email has @ sign");
         }else {
           $this.removeClass('focused');
           $('.field:first-child input + label + span').css({'opacity': 0});
