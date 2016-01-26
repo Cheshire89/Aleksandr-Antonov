@@ -8,31 +8,51 @@ function test_input($data) {
 $name = $email = $message = "";
 $nameErr = $emailErr = $messageErr = "";
 
+function parametersSet($name,$email,$message){
+ 	if(empty($name)||empty($email)||empty($message)){
+ 		return false;
+ 	}else if (!preg_match("/^[a-zA-Z ]*$/",$name)){
+ 		return false;
+ 	}else if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
+ 		return false;
+ 	}else{
+ 		return true;
+ 	}
+}
 
-if ($_SERVER["REQUEST_METHOD"] == "POST")	{
-	if(empty($_POST["name"])){
+
+function setName($data){
+	if(empty($data)){
 		$nameErr = "The Name is Required";
 	}else {
-		$name = test_input($_POST['name']);
+		$name = test_input($data);
 		if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
       	$nameErr = "Only letters and white space allowed"; 
-    }
+    	}
 	}
-
-	if(empty($_POST["email"])){
+}
+function setEmail($data){
+	if(empty($data)){
 		$emailErr = "The E-mail is Required";
 	}else{
-		$email = test_input($_POST['email']);
+		$email = test_input($data);
 		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       	$emailErr = "Invalid email format"; 
-    }
+    	}
 	}
-    
-    if(empty($_POST["message"])){
+}
+function setMessage($data){
+	if(empty($data)){
     	$messageErr = "E-mail could not be send without message";
     } else {
-    	$message = test_input($_POST['message']);
+    	$message = test_input($data);
     }
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST")	{
+	$name = setName($_POST["name"]);
+	$email = setEmail($_POST["email"]);
+	$message = setMessage($_POST["message"]);
 }
 	
 	
@@ -42,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")	{
 	$messages = "Name: ".$name."\r\n  E-mail: ".$email."\r\n Message: ".$message;
     $headers = "From:" . $name;
 
-    if(!empty($name) && !empty($email) && !filter_var($email, FILTER_VALIDATE_EMAIL) && !empty($message)){
+    if(parametersSet($name,$email,$message)){
     	mail($to, $subject, $messages, $headers);
     	echo '<h5 id="set">Your message had been sent<h5>'; 
     } 
@@ -79,7 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")	{
 		        <span class="error"><?php echo $messageErr; ?></span>
 	      </div>
 	      <div id="send">
-	      <input class="button" type="submit" value="Send" />
+	      <input id="send_btn" class="button" type="submit" value="Send" />
 	      </div>
   </form>
     </div>
