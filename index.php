@@ -187,10 +187,8 @@ include("php/data.php");
 	  <a href="#name" id="email_btn" class="btn green">Send Email</a>
     </div>
 
-    <?php include("php/send.php"); ?>
-
-    
-  </section>
+    <?php include("php/send.php");?>
+	</section>
   <footer>
     <div id="footer">
       <h4><?php echo $footer; ?></h4>

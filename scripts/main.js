@@ -183,12 +183,15 @@ $('#hire .field:nth-child(2) input').blur(function () {
 $("#email_btn").on("click",function(){
   $("#contact-email").addClass("visible");
   $("#email_btn").fadeOut("fast","linear");
-  $("#name").focus()
+  $("#name").focus();
 });
-$("#send_btn").on("click",function(){
-  $("#contact-email").addClass("visible");
-  $("#email_btn").fadeOut("fast","linear");
-  $("#name").focus()
+
+
+
+$('.error').each(function(){
+  if ( $.trim( $(this).text() ).length != 0 ) {
+    $(this).addClass("visible");
+  }
 });
 
 
@@ -209,4 +212,6 @@ $(".nav-placeholder").height($("nav").outerHeight());
     }
 
   });
+
+
 });

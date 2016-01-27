@@ -404,6 +404,8 @@ form .field label {
   text-align: center;
   color: #FFF;
 }
+
+
 form .field label + span {
   font-family:Raleway, sans-serif;
   opacity: 0;
@@ -418,8 +420,24 @@ form .field label + span {
   -o-transition: all 333ms ease-in-out;
   -ms-transition: all 333ms ease-in-out;
   transition: all 333ms ease-in-out;
-
 }
+
+form .error{
+  font-family:Raleway, sans-serif;
+  position: relative;
+  display: none;
+  top: 0;
+  left: 0;
+  background: tomato;
+  width: 100%;
+  padding: 18px 0;
+  font-size: 1.45em;
+  letter-spacing: 0.075em;
+  text-align: center;
+  color: #FFF;
+}
+
+
 form .field input[type="text"],
 form .field textarea#msg {
   border: none;

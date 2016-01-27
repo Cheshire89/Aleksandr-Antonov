@@ -5,8 +5,6 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
-$name = $email = $message = "";
-$nameErr = $emailErr = $messageErr = "";
 
 function parametersSet($name,$email,$message){
  	if(empty($name)||empty($email)||empty($message)){
@@ -27,7 +25,7 @@ function setName($data){
 	}else {
 		$name = test_input($data);
 		if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-      		echo "Only letters and white space allowed"; 
+      		echo "Only letters and white spaces are allowed"; 
     	}
 	}
 	return $name;
@@ -38,20 +36,24 @@ function setEmail($data){
 	}else{
 		$email = test_input($data);
 		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      		echo "Invalid email format"; 
+      		echo trim("Invalid email format"); 
     	}
 	}
 	return $email;
 }
 function setMessage($data){
 	if(empty($data)){
-    	echo "E-mail could not be send without message";
+    	echo "E-mail couldn't be send without a message";
     } else {
-    	$message = test_input($data);
+    	return test_input($data);
     }
-    return $message;
 }
 
+$name = null;
+$email = null;
+$message = null;
+
+$nameErr = $emailErr = $messageErr = "";
 	
 ?>
 <style type="text/css">
@@ -66,57 +68,41 @@ function setMessage($data){
 <div id="contact-email" class="content"><h2>E-mail</h2>
     <form id="hire" method="POST" action="<?php htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 	      <div class="field name-box">
-		        <input type="text" id="name" name="name" value="<?php echo $name;?>" placeholder="Greetings!" required />
+		        <input type="text" id="name" name="name" value="<?php echo $name;?>" placeholder="Greetings" required />
         		<label for="name">Name*</label>
 		        <span class="glyphicon-ok"></span>
-		        <span class="error">
-		        <?php
-		        	if ($_SERVER["REQUEST_METHOD"] == "POST")	{
-						$name = setName($_POST["name"]);
-					}
-		        ?>
-		        </span>
+		        <span class="error"><?php if ($_SERVER["REQUEST_METHOD"] == "POST"){$name = setName($_POST["name"]);}?></span>
 	      </div>
 
 	      <div class="field email-box">
 		        <input type="text" type="email" id="email" name="email" value="<?php echo $email;?>" placeholder="Name@email.com" required />
 		        <label for="email">Email*</label>
 		        <span class="glyphicon-ok"></span>
-		        <span class="error">
-		        	<?php
-		        	if ($_SERVER["REQUEST_METHOD"] == "POST")	{
-						$email = setEmail($_POST["email"]);
-					}
-		        	?>
-		        </span>
+		        <span class="error"><?php if ($_SERVER["REQUEST_METHOD"] == "POST"){$email = setEmail($_POST["email"]);}?></span>
 	      </div>
 
 	      <div class="field msg-box">
-		        <textarea id="msg" rows="4" name="message" value="<?php echo $message;?>" placeholder="How may I help you ?" required /></textarea>
+		        <textarea id="msg" rows="4" name="message" value="<?php echo $message;?>" placeholder="How may I help you ?"/></textarea>
 		        <label for="msg">Msg*</label>
 		        <span class="glyphicon-ok"></span>
-		        <span class="error">
-		        	<?php
-		        	if ($_SERVER["REQUEST_METHOD"] == "POST")	{
-						$message = setMessage($_POST["message"]);
-					}
-		        	?>
-		        </span>
+		        <span class="error"><?php if ($_SERVER["REQUEST_METHOD"] == "POST"){$message = setMessage($_POST["message"]);}?></span>
 	      </div>
 	      <div id="send">
 	      <input id="send_btn" class="button" type="submit" value="Send" />
+	      <?php
+			$to = "antonovfineart@gmail.com";
+		    $subject = "From: ".$name." My personal site";
+		    
+			$messages = "Name: ".$name."\r\n  E-mail: ".$email."\r\n Message: ".$message;
+		    $headers = "From:" . $name;
+
+		    if(parametersSet($name,$email,$message)){
+		    	mail($to, $subject, $messages, $headers);
+		    	echo '<h5 id="set">Your message had been sent<h5>'; 
+		    } else{
+		    	
+		    }
+			?>
 	      </div>
   </form>
     </div>
-<?php
-	$to = "antonovfineart@gmail.com";
-    $subject = "From: ".$name." My personal site";
-    
-	$messages = "Name: ".$name."\r\n  E-mail: ".$email."\r\n Message: ".$message;
-    $headers = "From:" . $name;
-
-    if(parametersSet($name,$email,$message)){
-    	mail($to, $subject, $messages, $headers);
-    	echo '<h5 id="set">Your message had been sent<h5>'; 
-    } 
-?>
