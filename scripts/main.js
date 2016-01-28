@@ -190,9 +190,17 @@ $("#email_btn").on("click",function(){
 
 $('.error').each(function(){
   if ( $.trim( $(this).text() ).length != 0 ) {
+    $("#contact-email").toggle().addClass("visible");
+    $("#email_btn").fadeOut("fast","linear");
     $(this).addClass("visible");
   }
+
+  if($(this).hasClass("visible")){
+     $("form").focus();
+  }
 });
+
+
 
 
 $(document).ready(function(){
