@@ -56,17 +56,11 @@ $message = null;
 $nameErr = $emailErr = $messageErr = "";
 	
 ?>
-<style type="text/css">
-#set{
-	font-family:Raleway, sans-serif;
-	text-align: center;
-	color:green;
-	padding-bottom:20px;
-}
-</style>
+			
 
 <div id="contact-email" class="content"><h2>E-mail</h2>
     <form id="hire" method="POST" action="<?php htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    		
 	      <div class="field name-box">
 		        <input type="text" id="name" name="name" value="<?php echo $name;?>" placeholder="Greetings" required />
         		<label for="name">Name*</label>
@@ -87,8 +81,6 @@ $nameErr = $emailErr = $messageErr = "";
 		        <span class="glyphicon-ok"></span>
 		        <span class="error"><?php if ($_SERVER["REQUEST_METHOD"] == "POST"){$message = setMessage($_POST["message"]);}?></span>
 	      </div>
-	      <div id="send">
-	      <input id="send_btn" class="button" type="submit" value="Send" />
 	      <?php
 			$to = "antonovfineart@gmail.com";
 		    $subject = "From: ".$name." My personal site";
@@ -96,13 +88,14 @@ $nameErr = $emailErr = $messageErr = "";
 			$messages = "Name: ".$name."\r\n  E-mail: ".$email."\r\n Message: ".$message;
 		    $headers = "From:" . $name;
 
-		    if(parametersSet($name,$email,$message)){
+		    if(($_SERVER["REQUEST_METHOD"] == "POST") && parametersSet($name,$email,$message)){
 		    	mail($to, $subject, $messages, $headers);
-		    	echo '<h5 id="set">Your message had been sent<h5>'; 
-		    } else{
-		    	
+		    	echo '<div class="field"><span id="set">Your message had been sent<span></div>'; 
 		    }
 			?>
+	      <div id="send">
+	      <input id="send_btn" class="button" type="submit" value="Send" />
+	      
 	      </div>
   </form>
     </div>

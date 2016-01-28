@@ -196,9 +196,15 @@ $('.error').each(function(){
   }
 
   if($(this).hasClass("visible")){
-     $("form").focus();
+     $("#name").focus();
   }
 });
+
+if($("#set").length){
+  $("#contact-email").toggle().addClass("visible");
+  $("#email_btn").fadeOut("fast","linear");
+  $("#set").focus();
+}
 
 
 
