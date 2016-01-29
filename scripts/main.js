@@ -1,3 +1,5 @@
+/*******************|Smooth Scroller|**********************/
+
 var ss = {
   fixAllLinks: function() {
     // Get a list of all links in the page
@@ -133,11 +135,30 @@ ss.STEPS = 25;
 
 ss.addEvent(window,"load",ss.fixAllLinks);
 
+/*******************|Sticky Menu|**********************/
+
+$(document).ready(function(){
+var navOffset = $("nav").offset().top;
+$("nav").wrap('<div class="nav-placeholder"></div>');
+$(".nav-placeholder").height($("nav").outerHeight());
 
 
+  $(window).scroll(function(){
 
-/*------------Form----------------------*/
-// Input Lock
+    var scrollPos = $(window).scrollTop();
+
+    if(scrollPos >= navOffset){
+      $("nav").addClass("fixed");
+    }else if(scrollPos < navOffset){
+      $("nav").removeClass("fixed");
+    }
+
+  });
+});
+/************************************************************************/
+
+/*******************|Form Floating Lables Handling|**********************/
+
 $('textarea').blur(function () {
     $('#hire textarea').each(function () {
         $this = $(this);
@@ -180,52 +201,35 @@ $('#hire .field:nth-child(2) input').blur(function () {
     });
 });
 
+/************************************************************************/
+/*********************|Send Email Button Behavior|***********************/
+
 $("#email_btn").on("click",function(){
-  $("#contact-email").addClass("visible");
-  $("#email_btn").fadeOut("fast","linear");
-  $("#name").focus();
+  $("#contact-email").addClass("visible"); //Display Email form
+  $("#email_btn").fadeOut("fast","linear"); // Remove the button
+  $("#name").focus(); // Set focus on the first form element
 });
+/************************************************************************/
 
-
+/*******************|Form ERROR / SUCCESS HANDLING|**********************/
 
 $('.error').each(function(){
-  if ( $.trim( $(this).text() ).length != 0 ) {
-    $("#contact-email").toggle().addClass("visible");
-    $("#email_btn").fadeOut("fast","linear");
-    $(this).addClass("visible");
+  if ( $.trim( $(this).text() ).length != 0 ) { //if .error has a message trim it
+    $("#contact-email").toggle().addClass("visible"); //display email form
+    $("#email_btn").fadeOut("fast","linear"); // remove email button
+    $(this).addClass("visible"); // display error
   }
 
   if($(this).hasClass("visible")){
-     $("#name").focus();
+     $("#name").focus(); // forcus on anything that has class visible
   }
 });
 
-if($("#set").length){
+if($("#set").length){ // check if success message is present
   $("#contact-email").toggle().addClass("visible");
   $("#email_btn").fadeOut("fast","linear");
-  $("#set").focus();
+  $("#set").focus(); //focus on it
 }
 
+/************************************************************************/
 
-
-
-$(document).ready(function(){
-var navOffset = $("nav").offset().top;
-$("nav").wrap('<div class="nav-placeholder"></div>');
-$(".nav-placeholder").height($("nav").outerHeight());
-
-
-  $(window).scroll(function(){
-
-    var scrollPos = $(window).scrollTop();
-
-    if(scrollPos >= navOffset){
-      $("nav").addClass("fixed");
-    }else if(scrollPos < navOffset){
-      $("nav").removeClass("fixed");
-    }
-
-  });
-
-
-});
