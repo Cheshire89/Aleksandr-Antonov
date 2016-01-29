@@ -230,6 +230,5 @@ if($("#set").length){ // check if success message is present
   $("#email_btn").fadeOut("fast","linear");
   $("#set").focus(); //focus on it
 }
-
 /************************************************************************/
 

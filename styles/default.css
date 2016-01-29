@@ -397,7 +397,7 @@ form .field label + span {
   transition: all 333ms ease-in-out;
 }
 
-form .error #set{
+form .error{
   font-family:Raleway, sans-serif;
   position: relative;
   display: none;
@@ -413,7 +413,18 @@ form .error #set{
 }
 
 form #set{
+  font-family:Raleway, sans-serif;
+  position: relative;
+  display: block;
+  top: 0;
+  left: 0;
   background: #008a32;
+  width: 100%;
+  padding: 18px 0;
+  font-size: 1.45em;
+  letter-spacing: 0.075em;
+  text-align: center;
+  color: #FFF;
 }
 
 
