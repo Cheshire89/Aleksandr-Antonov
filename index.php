@@ -158,10 +158,24 @@ include("php/data.php");
     <div id="projects" class="content"><h2>Projects</h2>
     	<div class="container">
 	    	<div class="project">
-	    		<img src="img/project1.jpg" alt="Sloane Gallery Website">
+	    		<figure class="effect-chico">
+	    			<img src="img/project1.jpg" alt="Sloane Gallery Website">
+	    			<figcaption>
+	    				<h2>Sloane Gallery</h2>
+	    				<p><strong>Tags: </strong>MySql, PHP, jQuery, Javascript</p>
+	    				<a href="#"></a>
+	    			</figcaption>
+	    		</figure>
 	    	</div>
 	    	<div class="project">
-	    		<img src="img/project2.jpg" alt="Aleksandr Antonov Interactive Resume">
+	    		<figure class="effect-chico">
+	    			<img src="img/project2.jpg" alt="Aleksandr Antonov Personal Page">
+	    			<figcaption>
+	    				<h2>Aleksandr Antonov</h2>
+	    				<p><strong>Tags: </strong>PHP, Javascript, jQuery</p>
+	    				<a href="#"></a>
+	    			</figcaption>
+	    		</figure>
 	    	</div>
 	    	<div class="project">
 	    	</div>
