@@ -127,6 +127,21 @@ $tools = array(
 	)
 );
 
+$projects = array(
+	$sloaneGallery = array(
+		"title" => "Sloane Gallery of Art",
+		"img" => "img/project1.jpg",
+		"tags" => "PHP, MySql, Javascript, jQuery",
+		"link" => "http://www.sloanegalleryofart.com"
+		),
+	$aleksandrAntonov = array(
+		"title" => "Aleksandr Antonov",
+		"img" => "img/project2.jpg",
+		"tags" => "PHP, Javascript, jQuery",
+		"link" => "/"
+		)
+	);
+
 
 
 $contacts = array(
