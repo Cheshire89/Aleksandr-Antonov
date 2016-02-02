@@ -233,6 +233,15 @@ nav{
   width: 90%;
   margin: 0px auto;
 }
+
+.description ul{
+  width: 100%;
+  list-style: disc;
+}
+
+.description ul li {
+  width: 100%;
+}
 /*********************|Abilities|*******************/
 
 #tools ul{
@@ -943,8 +952,19 @@ header, section, footer{
   margin: 0px 2.5%;
 }
 
+.description ul{
+  border:none !important;
+  padding: 5% auto 0 auto !important;
+  -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+}
+.description h5{
+  margin:3% auto;
+}
+
 .description p{
-  font-family: 'Helvetica','Arial',sans-serif
+  font-family: 'Helvetica','Arial',sans-serif;
   width: 100%;
 }
 
