@@ -75,18 +75,22 @@ $careers = array(
 	"name" => "Sloane Gallery of Art",
 	"position" => "Asistant Director",
 	"atending" => "2010-Present",
-	"description" => "<ul id=\"work\" class=\"new\">
-						<h4>header One</h4>
-						<li>Item One Testing for longer passages. Just in case Design Fails. 
-						Lets make this string even longer to see how it colapses. Just in case
-						Lets make it look like a paragraph.</li>
-						<p>Header Two</p>
-						<li>Item Two</li>
-						<li>Item Three</li>
-						<li>Item Four and here is another long string. Lets see what happens</li>
-						<li>Item Five</li>
-						<li>Item Six</li>
-					</ul>"
+	"description" => array(
+			"web design" => array(
+				"first" => "Creation and maintenance of sloanegalleryofart.com",
+				"second" => "Ongoing update and improvement of the website",
+				"third"	=> "Content management of all social platforms",
+				"fourth" => "SEO optimisation and online advertising",
+				"fifth" => "Trouble shooting and error handling"
+				),
+			"gallery work"=>array(
+				"first" => "Held regular lectures with students from various Univercities",
+				"second" => "Preparation of various different documents",
+				"third" => "Art market analisys",
+				"fourth" => "Evaluation of art works and appraisals",
+				"fifth" => "Cataloging the inventory"
+				)
+		)
 	),
 
 );
