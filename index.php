@@ -117,12 +117,19 @@ include("php/data.php");
 							<p>'.$career['atending'].'</p>
 						  </div>
 						  <div class="description">
-						  	<p>
-						  	<strong>'.$career['position'].'</strong>
-						  	
-						  	'.$career['description'].'
-						  	</p>
-						  </div>
+						  	<h4>
+						  	'.$career['position'].'
+						  	</h4>';
+					foreach($career['description'] as $section => $key){
+						echo '<h5><strong>'.ucwords($section).'</strong></h5>';
+						echo '<ul>';
+							foreach($key as $description){
+								echo '<li>'.$description.'</li>';
+							}
+						echo '</ul>';
+					}	  	
+						   	
+					echo'</div>
 						  </div>';
 				}
 				?>
