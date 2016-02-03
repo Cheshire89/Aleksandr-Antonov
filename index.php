@@ -117,12 +117,19 @@ include("php/data.php");
 							<p>'.$career['atending'].'</p>
 						  </div>
 						  <div class="description">
-						  	<p>
-						  	<strong>'.$career['position'].'</strong>
-						  	
-						  	'.$career['description'].'
-						  	</p>
-						  </div>
+						  	<h4>
+						  	'.$career['position'].'
+						  	</h4>';
+					foreach($career['description'] as $section => $key){
+						echo '<h5><strong>'.ucwords($section).'</strong></h5>';
+						echo '<ul>';
+							foreach($key as $description){
+								echo '<li>'.$description.'</li>';
+							}
+						echo '</ul>';
+					}	  	
+						   	
+					echo'</div>
 						  </div>';
 				}
 				?>
@@ -157,14 +164,17 @@ include("php/data.php");
 	<section id="four">
     <div id="projects" class="content"><h2>Projects</h2>
     	<div class="container">
-	    	<div class="project">
-	    		<img src="img/project1.jpg" alt="Sloane Gallery Website">
-	    	</div>
-	    	<div class="project">
-	    		<img src="img/project2.jpg" alt="Aleksandr Antonov Interactive Resume">
-	    	</div>
-	    	<div class="project">
-	    	</div>
+	    	<?php 
+    		foreach ($projects as $project) {
+    			echo '<div class="project">';
+    			echo '<figure class="effect-chico">';
+    			echo '<img src="'.$project["img"].'" alt="'.$project["title"].'">';
+    			echo '<figcaption>
+	    			  <h2>'.$project["title"].'</h2>
+	    			  <p><strong>Tags: </strong>'.$project["tags"].'</p>';
+	    		echo '</figcaption></figure></div>';
+    		}
+    	?>
     	</div>
    	</div>
    	</section>
