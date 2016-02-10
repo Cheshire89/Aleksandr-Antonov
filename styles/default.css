@@ -19,7 +19,7 @@ header, section, footer{
   width:100%;
   margin:1% auto;
 }
-for
+
 header,section, footer{
   background-color:white;
   box-shadow: 5px 5px 10px rgba(0,0,225,0.1);
@@ -239,6 +239,11 @@ nav{
   list-style: disc;
 }
 
+.description p{
+  width: 100%;
+  text-align: justify;
+}
+
 .description ul li {
   width: 100%;
 }
@@ -307,7 +312,6 @@ nav{
   margin:5% auto;
   width: 90%;
   box-shadow: 5px 5px 10px rgba(0,0,225,0.1);
-  float:left;
 }
 
 .project img{
@@ -316,11 +320,11 @@ nav{
 
 .project h2{
   color:#fff;
-  width: 100%;
+  width: 80%;
   display: block;
-  font-size: 2.5em;
+  font-size: 1.8em;
   margin:0 auto !important;
-  padding:30% 0 20px 0;
+  padding:20% 0 20px 0;
   border:none;
   text-align: center;
   -webkit-margin-before: 0.83em;
@@ -355,7 +359,6 @@ nav{
 .project figure{
   position: relative;
   overflow: hidden;
-  width: 100%;
   background:#2c7383;
   text-align: center;
   cursor: pointer;
@@ -472,6 +475,7 @@ figure.effect-chico:hover h2 {
   list-style: none;
   width: 80%;
   margin:4% auto 8% auto;
+  padding: 0;
 }
 #contact ul li{
   display: inline;
@@ -676,7 +680,7 @@ form input[type="submit"]:focus {
   display: none;
 }
 
-@media only screen and (min-width : 641px) {
+@media only screen and (min-width : 700px) {
 
 /**********************|General|*********************/
 
@@ -761,17 +765,19 @@ header, section, footer{
 .project{
   margin:2.5%;
   width: 45%;
+  float: left;
 }
 
 .project h2{
   width: 100% ;
-  font-size: 1.5em;
+  font-size: 1.4em;
   padding:25% 0 12px 0;
 }
 .project p{
   width: 100% ;
   font-size: 0.9em;
 }
+
 
 /**********************|Contact|*********************/
 #contact ul{
