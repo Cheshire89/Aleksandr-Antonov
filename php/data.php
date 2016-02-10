@@ -85,10 +85,11 @@ $careers = array(
 				),
 			"gallery work"=>array(
 				"first" => "Held regular lectures with students from various Univercities",
-				"second" => "Preparation of various different documents",
+				"second" => "Preparation of various documents",
 				"third" => "Art market analisys",
 				"fourth" => "Evaluation of art works and appraisals",
-				"fifth" => "Cataloging the inventory"
+				"fifth" => "Cataloging of the inventory and records keeping",
+				"sixth" => "Translation of documents from Russian to Enlish"
 				)
 		)
 	),
