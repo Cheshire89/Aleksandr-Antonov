@@ -167,12 +167,14 @@ include("php/data.php");
 	    	<?php 
     		foreach ($projects as $project) {
     			echo '<div class="project">';
+    			echo '<a href="'.$project["link"].'" target="_blank">';
     			echo '<figure class="effect-chico">';
     			echo '<img src="'.$project["img"].'" alt="'.$project["title"].'">';
     			echo '<figcaption>
 	    			  <h2>'.$project["title"].'</h2>
 	    			  <p><strong>Tags: </strong>'.$project["tags"].'</p>';
-	    		echo '</figcaption></figure></div>';
+	    		echo '</figcaption></figure>';
+	    		echo '</a></div>';
     		}
     	?>
     	</div>

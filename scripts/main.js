@@ -222,14 +222,14 @@ $('.error').each(function(){
   }
 
   if($(this).hasClass("visible")){
-     $("#name").focus(); // forcus on anything that has class visible
+     $("#hire").focus(); // forcus on anything that has class visible
   }
 });
 
 if($("#set").length){ // check if success message is present
   $("#contact-email").toggle().addClass("visible");
   $("#email_btn").fadeOut("fast","linear");
-  $("#set").focus(); //focus on it
+  $("#hire").focus(); //focus on it
 }
 /************************************************************************/
 
