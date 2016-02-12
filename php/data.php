@@ -18,17 +18,14 @@ define("MAX_NUM_OF_STARS",5);
 $navLinks = array(
 	'profile','experiences','abilities','projects','contact'
 );
-
-$bio = "<p>I am an allround web developer. 
-		I am a beginer programmer with decent 
-		knowledge of both front-end and back-end 
-		techniques. I love structure and order 
-		and I also stand for quality. I love 
-		spending time on fixing little details 
-		and making web apps on my spare time. Also 
-		I like working in a team, you'll learn 
-		faster and more. As the saying goes: 
-		'two heads are better than one'.</p>";
+		//Last Update 02/12/16
+$bio = "<p>I am a junior level programmer with decent knowledge of both 
+		front-end and back-end techniques. I love structure and order 		and I also stand for quality. I love spending time on fixing 
+		little details, learning code, and making web apps.  I have been
+	    doing programming as a hobby for past ". intval(date('Y')-2013).  " years and it brings me 
+	    sheer joy to find solution to perplexed problems. Also, I like 
+	    working in a team, you'll learn faster and a lot more. As the 
+	    saying goes: \"two heads are better than one\".</p>";
 
 $details = array(
 	"age" => getAge("1989-10-09"),
@@ -45,10 +42,10 @@ $eduaction = array(
 	"name" => "South High School",
 	"atending" => "2003-2007",
 	'location' => $details["location"],
-	'description' => "Copmpleted several multimedia and design courses including;
+	'description' => "Completed  several multimedia and design courses including;
 					Multimedia and Design,
 					Web Development, 
-					and AP Art. Awarded upon graduation \"Outstanding Achevements in Visual Arts\""
+					and AP Art. Awarded upon graduation \"Outstanding Achievements  in Visual Arts\""
 		),
 	$ccd = array(
 	"name" => "Community College of Denver",
@@ -57,7 +54,7 @@ $eduaction = array(
 	'description' => "The education was mainly focused on graphic design using Adobe products 
 					(Photoshop, Illustrator, InDesign). Along side I took a lot of other Art courses including;
 					2D and 3D art, digital and film photography, art history. It was also the place where I was
-					introduced to C++ and Java programming which set my desicion to graduate with Computer Science
+					introduced to C++ and Java programming which set my decision to graduate with Computer Science
 					Degree."
 		),
 
@@ -65,31 +62,31 @@ $eduaction = array(
 	"name" => "Univercity of Colorado at Denver",
 	"atending" => "2010-Present",
 	"location" => $details['location'],
-	'description' => "Currently Im a Junior at the UCD working on my Computer Sciense Degree. I also take interest in other
-					engeneering courses as my knowlege and curiousity increases."
+	'description' => "Currently I'am a Junior at the UCD working on my Computer Science Degree. I also take interest in other
+					engineering courses as my knowledge and curiosity increases."
 		)
 	);
 
 $careers = array(
 	$SGA = array(
 	"name" => "Sloane Gallery of Art",
-	"position" => "Asistant Director",
+	"position" => "Assistant Director",
 	"atending" => "2010-Present",
 	"description" => array(
 			"web design" => array(
 				"first" => "Creation and maintenance of sloanegalleryofart.com",
 				"second" => "Ongoing update and improvement of the website",
 				"third"	=> "Content management of all social platforms",
-				"fourth" => "SEO optimisation and online advertising",
+				"fourth" => "SEO optimization and online advertising",
 				"fifth" => "Trouble shooting and error handling"
 				),
 			"gallery work"=>array(
-				"first" => "Held regular lectures with students from various Univercities",
+				"first" => "Held regular lectures with students from various Universities",
 				"second" => "Preparation of various documents",
-				"third" => "Art market analisys",
+				"third" => "Art market analysis",
 				"fourth" => "Evaluation of art works and appraisals",
 				"fifth" => "Cataloging of the inventory and records keeping",
-				"sixth" => "Translation of documents from Russian to Enlish"
+				"sixth" => "Translation of documents from Russian to English"
 				)
 		)
 	),
