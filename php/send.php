@@ -82,7 +82,7 @@ $nameErr = $emailErr = $messageErr = "";
 		        <span class="error"><?php if ($_SERVER["REQUEST_METHOD"] == "POST"){$message = setMessage($_POST["message"]);}?></span>
 	      </div>
 	      <?php
-			$to = "antonovfineart@gmail.com";
+			$to = "antonov.a.aleksandr@gmail.com";
 		    $subject = "From: ".$name." My personal site";
 		    
 			$messages = "Name: ".$name."\r\n  E-mail: ".$email."\r\n Message: ".$message;
