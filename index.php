@@ -121,7 +121,7 @@ include("php/data.php");
 						  	'.$career['position'].'
 						  	</h4>';
 					foreach($career['description'] as $section => $key){
-						echo '<h5><strong>'.ucwords($section).'</strong></h5>';
+						echo '<p>'.ucwords($section).'</p>';
 						echo '<ul>';
 							foreach($key as $description){
 								echo '<li>'.$description.'</li>';
