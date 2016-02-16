@@ -11,7 +11,7 @@ function getAge($bDay){/* Y-m-d format*/
 	return $age;
 }
 
-
+define("GALLERY_NAME","Sloane Gallery of Art");
 define("MAX_NUM_OF_STARS",5);
 
 
@@ -20,7 +20,8 @@ $navLinks = array(
 );
 		//Last Update 02/12/16
 $bio = "<p>I am a junior level programmer with decent knowledge of both 
-		front-end and back-end techniques. I love structure and order 		and I also stand for quality. I love spending time on fixing 
+		front-end and back-end techniques. I love structure and order 		
+		and I also stand for quality. I love spending time on fixing 
 		little details, learning code, and making web apps.  I have been
 	    doing programming as a hobby for past ". intval(date('Y')-2013).  " years and it brings me 
 	    sheer joy to find solution to perplexed problems. Also, I like 
@@ -53,7 +54,7 @@ $eduaction = array(
 	"location" => $details['location'],
 	'description' => "The education was mainly focused on graphic design using Adobe products 
 					(Photoshop, Illustrator, InDesign). Along side I took a lot of other Art courses including;
-					2D and 3D art, digital and film photography, art history. It was also the place where I was
+					2D and 3D art, digital and film photography. It was also the place where I was
 					introduced to C++ and Java programming which set my decision to graduate with Computer Science
 					Degree."
 		),
@@ -63,30 +64,34 @@ $eduaction = array(
 	"atending" => "2010-Present",
 	"location" => $details['location'],
 	'description' => "Currently I'am a Junior at the UCD working on my Computer Science Degree. I also take interest in other
-					engineering courses as my knowledge and curiosity increases."
+					engineering courses."
 		)
 	);
 
 $careers = array(
 	$SGA = array(
-	"name" => "Sloane Gallery of Art",
+	"name" => GALLERY_NAME,
 	"position" => "Assistant Director",
 	"atending" => "2010-Present",
 	"description" => array(
-			"web design" => array(
-				"first" => "Creation and maintenance of sloanegalleryofart.com",
+			"web Design" => array(
+				"first" => "Created a website for Sloane Gallery of Art",
 				"second" => "Ongoing update and improvement of the website",
 				"third"	=> "Content management of all social platforms",
 				"fourth" => "SEO optimization and online advertising",
 				"fifth" => "Trouble shooting and error handling"
 				),
-			"gallery work"=>array(
-				"first" => "Held regular lectures with students from various Universities",
-				"second" => "Preparation of various documents",
+			"gallery Work"=>array(
+				"first" => "Held regular lectures about Russian Contemporary Art with students from various Universities",
+				"second" => "Preparation of various documents (Appraisals, Invoices, Press releases etc)",
 				"third" => "Art market analysis",
-				"fourth" => "Evaluation of art works and appraisals",
+				"fourth" => "Evaluation of private collections",
 				"fifth" => "Cataloging of the inventory and records keeping",
 				"sixth" => "Translation of documents from Russian to English"
+				),
+			"big Projects" => array(
+				"first" => "\"Genia Chef Glory of a New Century\", Russian State Museum, St.Petersburg, Russia 2011",
+				"second" => '"In Memory of Tengiz Mirzashvili" ,'.GALLERY_NAME.', Denver, CO 2013'
 				)
 		)
 	),
