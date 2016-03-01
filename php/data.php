@@ -100,9 +100,9 @@ $careers = array(
 
 $abilities = array(
 	$skills = array(
-	"Javascript" => 2,
+	"Javascript" => 3,
 	"jQuery" => 3,
-	"PHP" => 3,
+	"PHP" => 4,
 	"MySql" => 2,
 	"Java" => 1,
 	"C++" => 3,
@@ -127,7 +127,7 @@ $tools = array(
 	"Mac (2 years)" => 2,
 	"Linux (1 year)" => 1,
 	"MS Office (10 years)" => 5,
-	"Git (1 year)" => 2,
+	"Git (1 year)" => 3,
 	"XAMPP (3 years)" => 2,
 	"MS Visual Studio (3 years)" => 3,
 	"Eclipse (1 year)" =>1
@@ -146,6 +146,12 @@ $projects = array(
 		"img" => "img/project2.jpg",
 		"tags" => "PHP, Javascript, jQuery",
 		"link" => "/"
+		),
+	$toDoList = array(
+		"title" => "To Do List",
+		"img" => "img/project3.jpg",
+		"tags" => "Javascript",
+		"link" => "http://codepen.io/Cheshire89/pen/RaNVOq"
 		)
 	);
 
