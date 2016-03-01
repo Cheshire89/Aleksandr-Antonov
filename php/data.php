@@ -152,6 +152,12 @@ $projects = array(
 		"img" => "img/project3.jpg",
 		"tags" => "Javascript",
 		"link" => "http://codepen.io/Cheshire89/pen/RaNVOq"
+		),
+	$funnyQuotes = array(
+		"title" => "Random Fun Quotes",
+		"img" => "img/project4.jpg",
+		"tags" => "Javascript, jQuery",
+		"link" => "http://codepen.io/Cheshire89/pen/JGRaJg"
 		)
 	);
 

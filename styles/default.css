@@ -63,6 +63,7 @@ nav{
   margin:2.5% 5%;
   display: block;
   padding-bottom:2%;
+
 }
 
 .container ul{
@@ -311,7 +312,11 @@ nav{
 .project{
   margin:5% auto;
   width: 90%;
-  box-shadow: 5px 5px 10px rgba(0,0,225,0.1);
+  box-shadow: 5px 5px 10px rgba(0,0,225,0.2);
+}
+
+.project:hover{
+  box-shadow: none;
 }
 
 .project img{
@@ -321,7 +326,6 @@ nav{
 .project h2{
   color:#fff;
   width: 80%;
-  display: block;
   font-size: 1.8em;
   margin:0 auto !important;
   padding:20% 0 20px 0;
@@ -338,7 +342,6 @@ nav{
   letter-spacing: 1px;
   font-size: 1em;
   width: 100%;
-  display: block;
   margin:0 auto !important;
   text-align: center;
   -webkit-margin-before: 1em;
@@ -697,6 +700,10 @@ header, section, footer{
   -webkit-column-count: 1;
        -moz-column-count: 1;
             column-count: 1;
+  -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
 }
 
 .fixed{
@@ -1020,13 +1027,23 @@ header, section, footer{
 /**********************|Projects|*********************/
 
 .project{
-  margin:1.6666%;
+  margin:1.6%;
   width: 30%;
+  -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
 }
+
+.project:hover{
+  border:none;
+}
+
 
 .project img{
   width: 100%;
   margin:0 auto;
+  display: inline-block;
 }
 
 .project h2{
