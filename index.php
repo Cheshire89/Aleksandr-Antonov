@@ -62,11 +62,6 @@ include("php/data.php");
 			    <h3>Brief Bio</h3>
 			    <?php echo $bio; ?>
 		    </div>
-		    <div id="pic" class="aboutMe">
-		    	<img src="img/myPic.jpg" alt="Aleksandr Antonov"
-		    	onmouseover="this.src='img/myPic_reg.jpg'" onmouseout="this.src='img/myPic.jpg'" 
-		    	>
-		    </div>
 		    <div id="myInfo" class="aboutMe">
 		    <h3>Details</h3>
 		    	<?php

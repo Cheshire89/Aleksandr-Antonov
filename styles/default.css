@@ -3,7 +3,10 @@
 
 
 body{
-   background: url("../img/background.jpg") no-repeat center center fixed; 
+   background: url("../img/background.jpg") no-repeat center fixed; 
+   width: 100%;
+   height: 100%;
+   color: #ccc;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -21,13 +24,11 @@ header, section, footer{
 }
 
 header,section, footer{
-  background-color:white;
-  box-shadow: 5px 5px 10px rgba(0,0,225,0.1);
-  border-radius:5px;
+
 }
 
 p{
-  color:#000;
+  color:#ddd;
 }
 nav{
   padding:0;
@@ -38,7 +39,6 @@ nav{
 }
 
 .content{
-  background-color:rgba(255,255,255,0) ;
   margin:2% 0;
 }
 .content h2{
@@ -54,7 +54,7 @@ nav{
 .content h2 {
   font-family: 'Libre Baskerville', serif;
   text-align: center;
-  color:#2c7383;
+  color:#0485da;
 }
 
 .container{
@@ -79,7 +79,7 @@ nav{
   padding: 3px 0;
 }
 .container ul li:hover{
-  background-color: #F2f2f2;
+  background-color: rgba(224,224,224,0.1);
 }
 .container ul li .ability-score .glyphicon{
   font-size: 14px; 
@@ -105,7 +105,7 @@ nav{
   display:inline-block;
 }
 .container h3{
-  color: #2c7383;
+  color: #0485da;
   font-size: 1.7em;
   margin-top:3%;
   margin-bottom:2%;
@@ -128,6 +128,7 @@ nav{
   text-align:center;
   font-size: 4vw;
   margin:0 0 0 5%;
+  color: #999;
 }
 
 #logo img{
@@ -150,15 +151,16 @@ nav{
 .mobile_menu select {
     width:80%;
     padding:5px;
-    border:2px solid #2c7383;
+    border:2px solid #0485da;
     margin-top:10px;
     margin-bottom:10px;
 }
 
 .fixed {
   display: block;
-  background-color: #fff;
+  float: left;
   z-index: 1;
+  border:none !important;
   width: 100% !important;
   position:fixed !important;
   top:0 !important;
@@ -170,7 +172,7 @@ nav{
   width: 90%;
   margin:0px auto;
   padding: 3px;
-  border:10px solid #2c7383;
+  border:10px solid #0485da;
   border-radius: 100%;
 }
 .aboutMe {
@@ -189,14 +191,14 @@ nav{
   text-align: center;
 }
 .aboutMe p{
-  font-family: 'Helvetica','Arial',sans-serif;
+  font-family: Raleway,"Helvetica", sans-serif;
   font-size: 1em;
   width: 100% !important;
   margin: 1%;
 }
 
 .aboutMe h3{
-  color: #2c7383;
+  color: #0485da;
   font-size: 2.2vw;
   margin-top:3%;
   margin-bottom:1.2%;
@@ -205,6 +207,7 @@ nav{
 .aboutMe h5{
   font-size: 1.5em;
   margin:1% 0;
+  color:#999;
 }
 #myInfo span{
   width: 100%;
@@ -272,7 +275,7 @@ nav{
 }
 
 .filled{
-  color:#2c7383;
+  color:#0485da;
 }
 
 .glyphicon-star:before{
@@ -300,8 +303,8 @@ nav{
 }
 
 .green {
-  background-color: #47757F;
-  box-shadow: 0px 5px 0px 0px #243B40;
+  background-color: #0485da;
+  box-shadow: 0px 5px 0px 0px #055990;
 }
 
 .green:hover {
@@ -362,7 +365,7 @@ nav{
 .project figure{
   position: relative;
   overflow: hidden;
-  background:#2c7383;
+  background:#0485da;
   text-align: center;
   cursor: pointer;
   -webkit-margin-before: 1em;
@@ -491,7 +494,7 @@ figure.effect-chico:hover h2 {
 }
 #contact img:hover{
   border-radius: 100%;
-  border:2px solid #2c7383;
+  border:2px solid #0485da;
 }
 #contact ul li a img {
   width: 15%;
@@ -522,7 +525,7 @@ form .field label {
   position: absolute;
   top: 0;
   left: 0;
-  background: #47757F;
+  background: #0485da;
   width: 100%;
   padding: 18px 0;
   font-size: 1.45em;
@@ -633,13 +636,13 @@ form .field textarea.focused + label {
 }
 form .field:hover label {
   width: 18%;
-  background: #47757F;
+  background: #0485da;
   color: #FFF;
 }
 
 form input[type="submit"] {
   width: 50%;
-  background: #47757F;
+  background: #0485da;
   border-radius: 20px;
   border:none;
   color: white;
@@ -656,12 +659,12 @@ form input[type="submit"] {
   -ms-transition: all 333ms ease-in-out;
   transition: all 333ms ease-in-out;
   margin: 20px 0;
-  box-shadow: 0px 5px 0px 0px #243B40;
+  box-shadow: 0px 5px 0px 0px #055990;
 }
 
 form input[type="submit"]:hover {
   background: #fcff74;
-  color: #000;
+  color: #FFF;
 }
 form input[type="submit"]:focus {
    transform: translate(0px, 5px);
@@ -757,7 +760,7 @@ header, section, footer{
   display: block;
   margin:10px auto;
   width: 40%;
-  border:10px solid #2c7383;
+  border:10px solid #0485da;
   border-radius: 100%;
 }
 
@@ -802,7 +805,8 @@ header, section, footer{
 
 header, section, footer{
   width:80%;
-  margin:1% auto;
+  margin:1% 0;
+  float: left;
 }
 .content h3{
   text-align: left;
@@ -817,7 +821,7 @@ header, section, footer{
   -webkit-column-count: 2;
        -moz-column-count: 2;
             column-count: 2;
-}
+}$#
 
 /**********************|Header|*********************/
 
@@ -881,12 +885,11 @@ header, section, footer{
 }
 #cssmenu {
   width: auto;
-  border-bottom: 3px solid #2c7383;
   font-family: Raleway, sans-serif;
   line-height: 1;
 }
 #cssmenu ul {
-  background: #ffffff;
+ 
 }
 #cssmenu > ul > li {
   
@@ -896,6 +899,7 @@ header, section, footer{
 #cssmenu.align-center > ul {
   font-size: 0;
   text-align: center;
+  border-bottom: 1px solid #0485da;
 }
 #cssmenu.align-center > ul > li {
   width: auto;
@@ -908,7 +912,7 @@ header, section, footer{
   font-size: 15px;
   font-weight: 400;
   text-decoration: none;
-  color: #000;
+  color: #FFF;
   -webkit-transition: all .2s ease;
   -moz-transition: all .2s ease;
   -ms-transition: all .2s ease;
@@ -919,7 +923,7 @@ header, section, footer{
 #cssmenu > ul > li.active > a,
 #cssmenu > ul > li:hover > a,
 #cssmenu > ul > li > a:hover {
-  color: #ffffff;
+  color: #FFF;
 }
 #cssmenu > ul > li > a:after {
   position: absolute;
@@ -946,7 +950,7 @@ header, section, footer{
 #cssmenu > ul > li.active > a:after,
 #cssmenu > ul > li:hover > a:after,
 #cssmenu > ul > li > a:hover:after {
-  background: #2c7383;
+  background: #0485da;
 }
 
 /**********************|Experiences|*********************/
@@ -963,7 +967,7 @@ header, section, footer{
   margin: 0px 2.5%;
 }
 .place h4{
-  color: #61614e;
+  color: #999;
   font-family:Raleway, sans-serif;
   font-weight: 700;
   margin:10px 0;
@@ -987,12 +991,12 @@ header, section, footer{
 }
 
 .description p{
-  font-family: 'Helvetica','Arial',sans-serif;
+  font-family: Raleway,"Helvetica", sans-serif;
   width: 100%;
 }
 
 .description p strong{
-  color: #61614e;
+  color: #999;
   display: block;
   padding-top:8px;
   margin-bottom: 10px;
@@ -1001,7 +1005,7 @@ header, section, footer{
 /**********************|Profile|*********************/
 
 .aboutMe p{
-  font-family: 'Helvetica','Arial',sans-serif;
+  font-family: Raleway,"Helvetica", sans-serif;
   text-align: left;
 }
 .aboutMe h3{
@@ -1015,12 +1019,12 @@ header, section, footer{
   display: block;
   margin:0px auto;
   width: 90%;
-  border:10px solid #2c7383;
+  border:10px solid #0485da;
   border-radius: 100%;
 }
 .aboutMe {
-  margin:5% 1%;
-  width: 30%;
+  margin:5% 4%;
+  width: 40%;
   display:inline-block;
 }
 
