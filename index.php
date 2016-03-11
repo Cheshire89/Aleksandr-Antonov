@@ -15,61 +15,64 @@ include("php/data.php");
 <meta name="revisit-after" content="7 days">
 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-<link rel="stylesheet" type="text/css" href="styles/default.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.js"></script>
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="styles/default.css">
 </head>
-<div id="wrapper">
-<header id="header">
-	<div id="logo">
-	    <img src="img/logo.png" alt="logo">
-	    <h3>Interactive Resume</h3>
-	 </div>
-  <nav>
-	  <div id="cssmenu" class="align-center">
-	    <ul id="menu">
-		    <?php
-		  		foreach($navLinks as $link){
-		  			echo '<li><a href="#'.$link.'">'.ucfirst($link).'</a></li>';
-		  		}
-		  	?>
-	    </ul>
-	   </div>
-	    <div id="mobile" class="mobile_menu">
-	     <select onchange="location = this.options[this.selectedIndex].value;">
-	      <option value="#" selected>MENU</option>
-	      <option value="#">----------------------------------</option>
-	      <?php
-	      		foreach ($navLinks as $link) {
-	      			echo '<option value="#'.$link.'">'.ucfirst($link).'</option>';
-	      		}
-	      ?>
-	     </select>
-	     <!--<script type="text/javascript" src="scripts/mobile_menu_selection.js"></script>-->
-	    </div>
-   </nav>
-  
-</header> <!--End of header -->
+<body>
+<div class="jumbotron">
+	<div class="container">
+		 <img src="img/logo.png" alt="logo">
+	     <p class="lead"> Interactive Resume</p>
+	</div>
+	<div class="overlay"></div>
+		<a href="#profile" class="scroll-down">
+			<span class="glyphicon glyphicon-chevron-down"></span>
+		</a>
+	</div>
+	<nav class="navbar navbar-default" id="navbar-example" rule="navigation">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav">
+				<?php
+			  		foreach($navLinks as $link){
+			  			echo '<li><a href="#'.$link.'">'.ucfirst($link).'</a></li>';
+			  		}
+			  	?>
+			</ul>
+		</div>
+	</nav>
   <section id="one">
     <div id="profile" class="content">
     	<h2>Profile</h2>
 	    <div class="container">
-		    <div id="bio" class="aboutMe">
-			    <h3>Brief Bio</h3>
-			    <?php echo $bio; ?>
-		    </div>
-		    <div id="myInfo" class="aboutMe">
-		    <h3>Details</h3>
-		    	<?php
-		    		foreach($details as $detail => $info){
-		    			echo "<span><h5>".ucfirst($detail).":</h5><p>".$info."</p></span>";
-		    		}
-		    	?>
-		    </div>
+	    	
+			    <div id="bio" class="aboutMe">
+				    <h3>Brief Bio</h3>
+				    <?php echo $bio; ?>
+			    </div>
+			    <div id="myInfo" class="aboutMe">
+			    <h3>Details</h3>
+			    	<?php
+			    		foreach($details as $detail => $info){
+			    			echo "<h5>".ucfirst($detail).":</h5><p>".$info."</p>";
+			    		}
+			    	?>
+			    </div>
+			   
 		   </div>
 	    </div>
 	</section>
@@ -201,6 +204,6 @@ include("php/data.php");
       <h4><?php echo $footer; ?></h4>
     </div>
   </footer>
-</div> <!-- End of wrapper -->
-<script type="text/javascript" src="scripts/main.js"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
+</body>
 </html>

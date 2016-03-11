@@ -1,30 +1,98 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway);
 @import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700);
+@keyframes wiggle {
+  0% {
+    padding-top: 20px;
+  }
+
+  50% {
+    padding-top: 28px;
+  }
+
+  100% {
+    padding-top: 20px;
+  }
+}
 
 
-body{
-   background: url("../img/background.jpg") no-repeat center fixed; 
-   width: 100%;
-   height: 100%;
-   color: #ccc;
+.jumbotron{
+  top: 0;
+  left: 0;
+  background: no-repeat center right fixed url(../img/background.jpg);
+  height: 100vh;
+  display: inline-block;
+
+  -webkit-backgroun-size: 100%; 
+    -moz-background-size: 100%; 
+    -o-background-size: 100%; 
+    background-size: 100%; 
+  
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/background.jpg', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/background.jpg', sizingMethod='scale');
+  
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.jumbotron .overlay { background-color: #0485da; position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; opacity: 0.45; filter:alpha(opacity=45); z-index: 2; }
+
+.jumbotron .container { position: relative; top: 10%; z-index: 4; text-align: center; }
+.jumbotron .container > * { text-align: center; color: #FFFFFF; }
+.jumbotron .container img {width: 60%; padding: 2%; margin: 2% auto; float: left; border-bottom: 1px solid rgba(255,255,255,0.6)}
+.jumbotron .container .lead { width:60%; font-size: 28px; float: left; }
+.jumbotron .scroll-down { height: 80px; width: 110px; display: block; position: absolute; bottom: 0px; right: 5%; background-color: #222222; text-align: center; z-index: 6; }
+.jumbotron .scroll-down .glyphicon { 
+  color: #FFFFFF; 
+  font-size: 30px; 
+  padding-right: 2px; 
+  padding-top: 20px; 
+  margin-left: 35%;
+  animation-name: wiggle;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+.jumbotron .scroll-down:hover .glyphicon { padding-top: 25px; }
+
+
+.navbar  { border: 0px; background-color: #222222; position: relative; top: 0; left: 87%; width: 110px; z-index: 999; }
+.navbar .navbar-collapse { padding: 0px; max-height: none; }
+.navbar .navbar-nav { float: none; }
+.navbar-nav { margin: 0px; }
+.navbar .nav > li { display: block; float: none; height: 80px; } 
+.navbar .nav > li a { display: block;  height: 80px; text-align: center; padding-top: 30px; font-weight: 600; color: #FFFFFF; }
+.navbar .nav > li a:hover, .navbar .nav > li a:focus { color: #999999; }
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus { background-color: #22A39F; color: #FFFFFF; }
+.navbar-default .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:focus .icon-bar { background: #222222; }
+
+.fixed .navbar  { position: fixed; top: 60px; }
+
+body{
+   background: url("../img/background1.jpg") no-repeat center fixed; 
+   width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
 }
 
 #wrapper{
   width:100%;
   margin:0 auto;
+  position: relative;
 }
 
-header, section, footer{
+section, footer{
   width:100%;
-  margin:1% auto;
-}
-
-header,section, footer{
-
+  margin:2% auto;
+  float: none;
 }
 
 p{
@@ -33,20 +101,16 @@ p{
 nav{
   padding:0;
 }
-.nav-placeholder{
-  width: 100%;
-  overflow: hidden;
-}
 
 .content{
-  margin:2% 0;
+  margin:2% auto;
 }
 .content h2{
   font-size:3em;
   font-weight: 400;
   width: 90%;
   margin:0 auto;
-  padding-top:6%;
+  padding-top:3%;
   padding-bottom: 1%;
   border-bottom: 1px solid #999;
 } 
@@ -112,60 +176,6 @@ nav{
   text-align: center;
 }
 
-#cssmenu{
-  display: none;
-}
-
-#logo{
-  width: 70%;
-  margin:2% auto;
-  padding-top:0.5%;
-}
-
-#logo h3{
-  font-family: Raleway, sans-serif;
-  font-weight: normal;
-  text-align:center;
-  font-size: 4vw;
-  margin:0 0 0 5%;
-  color: #999;
-}
-
-#logo img{
-  width: 100%;
-  margin:8% 0 2% 5%;
-}
-
-#navigation{
-  width:50%;
-  margin:0 auto;
-  display: none;
-}
-
-.mobile_menu {
-    text-align: center;
-    overflow:hidden;
-    padding:10px;
-    min-height:10px;
-}
-.mobile_menu select {
-    width:80%;
-    padding:5px;
-    border:2px solid #0485da;
-    margin-top:10px;
-    margin-bottom:10px;
-}
-
-.fixed {
-  display: block;
-  float: left;
-  z-index: 1;
-  border:none !important;
-  width: 100% !important;
-  position:fixed !important;
-  top:0 !important;
-  left:0 !important;
-}
 /*********************|Profile|*******************/
 .aboutMe img{
   display: block;
@@ -181,9 +191,6 @@ nav{
   display:block;
   vertical-align: top;
 }
-.aboutMe:nth-child(2){
-  vertical-align: middle;
-}
 
 .aboutMe p, .aboutMe h3, .aboutMe h5{
   font-family:Raleway, sans-serif;
@@ -197,9 +204,13 @@ nav{
   margin: 1%;
 }
 
+#myInfo p{
+  font-size: 1.2em;
+}
+
 .aboutMe h3{
   color: #0485da;
-  font-size: 2.2vw;
+  font-size: 1.7em;
   margin-top:3%;
   margin-bottom:1.2%;
 }
@@ -218,7 +229,7 @@ nav{
 /*********************|Experiences|*******************/
 .row{
   display: block;
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   padding:4% 0;
   border-bottom: 1px solid #ccc;
@@ -226,6 +237,11 @@ nav{
 .row:last-child{
   border:none;
 }
+
+.row h4{
+  color: #ccc;
+}
+
 .place{
   display: block;
   width: 90%;
@@ -248,8 +264,16 @@ nav{
   text-align: justify;
 }
 
+.description h4{
+  color: #aaa;
+}
+
 .description ul li {
   width: 100%;
+  color: #ccc;
+}
+.descritption h4{
+
 }
 /*********************|Abilities|*******************/
 
@@ -314,7 +338,7 @@ nav{
 
 .project{
   margin:5% auto;
-  width: 90%;
+  width: 70%;
   box-shadow: 5px 5px 10px rgba(0,0,225,0.2);
 }
 
@@ -502,9 +526,10 @@ figure.effect-chico:hover h2 {
 
 #footer h4{
   text-align: center;
-  font-size:0.8em;
+  font-size:0.9em;
   padding: 1%;
   margin: 0;
+  color: #ccc;
 }
 
 /*********************|Form / E-mail|*******************/
@@ -690,9 +715,9 @@ form input[type="submit"]:focus {
 
 /**********************|General|*********************/
 
-header, section, footer{
+section, footer{
   width:80%;
-  margin:1% auto;
+  margin:1% 0;
 }
 
 .content h3{
@@ -709,9 +734,10 @@ header, section, footer{
     transition: all 1s;
 }
 
-.fixed{
-  display: block;
+.container ul:last-child{
+  border:none;
 }
+
 .visible {
   display: block !important;
   -webkit-transition: all 1333ms ease-in-out;
@@ -722,34 +748,14 @@ header, section, footer{
 }
 
 /**********************|Header|*********************/
-#logo{
-  width: 50%;
-  margin:2% auto;
-}
 
-#logo h3{
-  text-align:center;
-  font-size: 3vw;
-}
-
-#logo h3{
-  margin:0 0 0 5%;
-}
-
-#logo img{
-  width: 100%;
-  margin:8% 0 2% 5%;
-}
-
-#cssmenu {
-  display: none;
-}
 
 /**********************|Profile|*********************/
 
 .aboutMe p{
   text-align: center;
 }
+
 .aboutMe h3{
   text-align: center !important;
 }
@@ -768,6 +774,12 @@ header, section, footer{
   margin:0 auto;
   width: 90%;
   display:block;
+}
+
+/**********************|Careers|*********************/
+
+.row h4{
+  color: #999;
 }
 
 /**********************|Projects|*********************/
@@ -803,163 +815,53 @@ header, section, footer{
 
 /**********************|General|*********************/
 
-header, section, footer{
+section, footer{
   width:80%;
-  margin:1% 0;
-  float: left;
+  margin:1% 0 !important;
+  float: none;
+  display: inline-block;
 }
+.content ul{
+  margin: 0 auto;
+}
+
 .content h3{
   text-align: left;
   margin-left:3%;
 }
 .content h2{
   width: 35%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content h3{
+  margin-left: 11%;
+}
+
+.containter{
+  width: 80%;
+  margin: 0 auto;
 }
 
 .container ul{
+  position: relative;
+  width: 80%;
   padding-left:40px;
   -webkit-column-count: 2;
        -moz-column-count: 2;
             column-count: 2;
-}$#
+}
 
 /**********************|Header|*********************/
 
-#logo{
-  width: 40%;
-  margin:2% auto;
-  padding-top:0.5%;
-}
-
-#logo h3{
-  font-family: Raleway, sans-serif;
-  font-weight: normal;
-  text-align:center;
-  font-size: 2.5vw;
-}
-
-#logo h3{
-  margin:0 0 0 5%;
-
-}
-
-#logo img{
-  width: 100%;
-  margin:8% 0 2% 5%;
-}
 
 /**********************|Menu|*********************/
 
-.mobile_menu{
-  display: none;
-}
 
-#cssmenu{
-  display:block;
-}
-
-
-#cssmenu,
-#cssmenu ul,
-#cssmenu ul li,
-#cssmenu ul li a {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  list-style: none;
-  line-height: 1;
-  display: block;
-  position: relative;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-#cssmenu:after,
-#cssmenu > ul:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-}
-#cssmenu {
-  width: auto;
-  font-family: Raleway, sans-serif;
-  line-height: 1;
-}
-#cssmenu ul {
- 
-}
-#cssmenu > ul > li {
-  
-  width: 80%;
-}
-
-#cssmenu.align-center > ul {
-  font-size: 0;
-  text-align: center;
-  border-bottom: 1px solid #0485da;
-}
-#cssmenu.align-center > ul > li {
-  width: auto;
-  display: inline-block ;
-
-}
-#cssmenu > ul > li > a {
-  z-index: 2;
-  padding: 22px 28px 14px 28px;
-  font-size: 15px;
-  font-weight: 400;
-  text-decoration: none;
-  color: #FFF;
-  -webkit-transition: all .2s ease;
-  -moz-transition: all .2s ease;
-  -ms-transition: all .2s ease;
-  -o-transition: all .2s ease;
-  transition: all .2s ease;
-  margin-right: -4px;
-}
-#cssmenu > ul > li.active > a,
-#cssmenu > ul > li:hover > a,
-#cssmenu > ul > li > a:hover {
-  color: #FFF;
-}
-#cssmenu > ul > li > a:after {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  width: 100%;
-  height: 120%;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  content: "";
-  -webkit-transition: all .2s ease;
-  -o-transition: all .2s ease;
-  transition: all .2s ease;
-
-  -webkit-transform: perspective(5px) rotateX(2deg);
-  -webkit-transform-origin: bottom;
-  -moz-transform: perspective(5px) rotateX(2deg);
-  -moz-transform-origin: bottom;
-  transform: perspective(5px) rotateX(2deg);
-  transform-origin: bottom;
-}
-#cssmenu > ul > li.active > a:after,
-#cssmenu > ul > li:hover > a:after,
-#cssmenu > ul > li > a:hover:after {
-  background: #0485da;
-}
 
 /**********************|Experiences|*********************/
 
-.row{
-  display: block;
-  width: 90%;
-  margin: 1% auto;
-}
 .place{
   display:inline-block;
   float: left;
@@ -982,6 +884,7 @@ header, section, footer{
 .description ul{
   border:none !important;
   padding: 5% auto 0 auto !important;
+  width: 100%;
   -webkit-column-count: 1;
        -moz-column-count: 1;
             column-count: 1;
@@ -995,6 +898,7 @@ header, section, footer{
   width: 100%;
 }
 
+
 .description p strong{
   color: #999;
   display: block;
@@ -1003,40 +907,67 @@ header, section, footer{
 }
 
 /**********************|Profile|*********************/
+#profile .container{
+  width: 80%;
+}
+
+.aboutMe {
+  width: 40%;
+  padding: 0;
+  display:inline-block;
+}
+
+.aboutMe:nth-child(odd){
+  margin: 3% 0 3% 9%;
+}
+.aboutMe:nth-child(even){
+  margin: 3% 0 3% 9%;
+}
 
 .aboutMe p{
   font-family: Raleway,"Helvetica", sans-serif;
-  text-align: left;
+  text-align: right;
+}
+
+#bio p{
+  width: 100%;
+}
+
+#myInfo p{
+  font-size: 1.2em;
+  width: 50% !important;
+  display: inline-block;
+}
+
+#myInfo h3{
+  margin:5% 0 7% 0;
 }
 .aboutMe h3{
-  text-align: left !important;
+  width: 100%;
+  text-align: right !important;
   margin:5% 0;
 }
 .aboutMe h5{
   text-align: left;
+  width: 48%;
+  display: inline-block;
 }
-.aboutMe img{
+
+.aboutMe span{
+  width: 80%;
   display: block;
-  margin:0px auto;
-  width: 90%;
-  border:10px solid #0485da;
-  border-radius: 100%;
-}
-.aboutMe {
-  margin:5% 4%;
-  width: 40%;
-  display:inline-block;
 }
 
 /**********************|Projects|*********************/
 
-.project{
-  margin:1.6%;
-  width: 30%;
-  -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
+.project:nth-child(odd){
+  margin:2.5% 3.5% 2.5% 11.5%;
+  width: 35%;
+}
+
+.project:nth-child(even){
+  margin:2.5% 11.5% 2.5% 3.5%;
+  width: 35%;
 }
 
 .project:hover{

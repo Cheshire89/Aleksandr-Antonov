@@ -1,3 +1,6 @@
+
+
+
 /*******************|Smooth Scroller|**********************/
 
 var ss = {
@@ -138,22 +141,25 @@ ss.addEvent(window,"load",ss.fixAllLinks);
 /*******************|Sticky Menu|**********************/
 
 $(document).ready(function(){
-var navOffset = $("nav").offset().top;
-$("nav").wrap('<div class="nav-placeholder"></div>');
-$(".nav-placeholder").height($("nav").outerHeight());
+  
+$(".jumbotron").css({ height:($(window).height())+'px'});
+
+// var navOffset = $(".navbar").offset().top;
+// $(".navbar").wrap('<div class="nav-placeholder"></div>');
+// $(".nav-placeholder").height($(".navbar").outerHeight());
 
 
-  $(window).scroll(function(){
+//   $(window).scroll(function(){
 
-    var scrollPos = $(window).scrollTop();
+//     var scrollPos = $(window).scrollTop();
 
-    if(scrollPos >= navOffset){
-      $("nav").addClass("fixed");
-    }else if(scrollPos < navOffset){
-      $("nav").removeClass("fixed");
-    }
+//     if(scrollPos >= navOffset){
+//       $(".navbar").addClass("fixed");
+//     }else if(scrollPos < navOffset){
+//       $(".navbar").removeClass("fixed");
+//     }
 
-  });
+//   });
 
 });
 /************************************************************************/
@@ -206,6 +212,7 @@ $('#hire .field:nth-child(2) input').blur(function () {
 /*********************|Send Email Button Behavior|***********************/
 
 $("#email_btn").on("click",function(){
+  console.log("hello");
   $("#contact-email").addClass("visible"); //Display Email form
   $("#email_btn").fadeOut("fast","linear"); // Remove the button
   $("#name").focus(); // Set focus on the first form element
@@ -232,4 +239,5 @@ if($("#set").length){ // check if success message is present
   $("#hire").focus(); //focus on it
 }
 /************************************************************************/
+
 
