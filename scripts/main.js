@@ -1,6 +1,5 @@
 
 
-
 /*******************|Smooth Scroller|**********************/
 
 var ss = {
@@ -140,26 +139,25 @@ ss.addEvent(window,"load",ss.fixAllLinks);
 
 /*******************|Sticky Menu|**********************/
 
-$(document).ready(function(){
-  
-$(".jumbotron").css({ height:($(window).height())+'px'});
+// $(document).ready(function(){
+//   $(".nav li:first").addClass("active");
+// });
 
-// var navOffset = $(".navbar").offset().top;
-// $(".navbar").wrap('<div class="nav-placeholder"></div>');
-// $(".nav-placeholder").height($(".navbar").outerHeight());
+$(window).scroll(function() {
+    var windscroll = $(window).scrollTop();
+    if (windscroll >= 100) {
+        $('section').each(function(i) {
+            if ($(this).position().top <= windscroll) {
+                $('.nav li.active').removeClass('active');
+                $('.nav li').eq(i).addClass('active');
+            }
+        });
 
+    } else {
 
-//   $(window).scroll(function(){
-
-//     var scrollPos = $(window).scrollTop();
-
-//     if(scrollPos >= navOffset){
-//       $(".navbar").addClass("fixed");
-//     }else if(scrollPos < navOffset){
-//       $(".navbar").removeClass("fixed");
-//     }
-
-//   });
+        $('.nav li.active').removeClass('active');
+        $('.nav li:first').addClass('active');
+    }
 
 });
 /************************************************************************/
@@ -212,7 +210,6 @@ $('#hire .field:nth-child(2) input').blur(function () {
 /*********************|Send Email Button Behavior|***********************/
 
 $("#email_btn").on("click",function(){
-  console.log("hello");
   $("#contact-email").addClass("visible"); //Display Email form
   $("#email_btn").fadeOut("fast","linear"); // Remove the button
   $("#name").focus(); // Set focus on the first form element
