@@ -5,6 +5,7 @@ include("php/data.php");
 <html>
 <head>
 	<title>Aleksandr Antonov | Interactive Resume</title>
+<meta name="google-site-verification" content="OlfRmxzE2z0tKxC_IeTr6q7tXgkcb-ZyeJLOZbJgzLI" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta http-equiv="content-script-type" content="text/javascript">
 <meta http-equiv="content-style-type" content="text/css">
@@ -13,6 +14,7 @@ include("php/data.php");
 <meta name="keywords" content="Aleksandr Antonov, Interactive Resume, PHP programmer, Web developer, Interactive CV, Resume, HRMatches, PHP, Javascript, OOP">
 <meta name="robots" content="index, follow">
 <meta name="revisit-after" content="7 days">
+<link rel="alternate" href="http://aleksandrantonov.com" hreflang="en-us" />
 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">

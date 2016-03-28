@@ -42,7 +42,7 @@
 
 .jumbotron .overlay { background-color: #0485da; position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; opacity: 0.45; filter:alpha(opacity=45); z-index: 2; width:100vw; }
 
-.jumbotron .container { position: relative; top: 30%; z-index: 4; text-align: center; padding-top: 0px; }
+.jumbotron .container { position: relative; top: 25%; z-index: 4; text-align: center; padding-top: 0px; vertical-align: middle; }
 .jumbotron .container > * { text-align: center; color: #FFFFFF; }
 .jumbotron .container img {width: 60%; padding: 2%; margin: 2% auto; float:none; border-bottom: 1px solid rgba(255,255,255,0.6)}
 .jumbotron .container .lead { width:60%; font-size: 16px; float: none; }
@@ -717,6 +717,7 @@ form input[type="submit"]:focus {
     right: 20px;
     top: 20px;    
   }
+  .jumbotron {width: 100vw;}
   .jumbotron .container { top: 10%;}
   .jumbotron .scroll-down { width: 110px; right: 5%; }
 

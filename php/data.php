@@ -102,13 +102,14 @@ $abilities = array(
 	$skills = array(
 	"Javascript" => 3,
 	"jQuery" => 3,
+	"AJAX" => 2,
 	"PHP" => 4,
 	"MySql" => 2,
 	"Java" => 1,
 	"C++" => 3,
 	"HTML5" => 4,
-	"CSS3" => 4,
-	"BootStrap Framework" => 2,
+	"CSS3 / Sass" => 4,
+	"BootStrap / Bourbon" => 3,
 	"SEO" => 3,
 	"Comand Line" => 3,
 	"Windows PowerShell" => 3
@@ -130,7 +131,8 @@ $tools = array(
 	"Git (1 year)" => 3,
 	"XAMPP (3 years)" => 2,
 	"MS Visual Studio (3 years)" => 3,
-	"Eclipse (1 year)" =>1
+	"Eclipse (1 year)" =>1,
+	"Various APIs (1 year)" => 3
 	)
 );
 
@@ -151,13 +153,19 @@ $projects = array(
 		"title" => "To Do List",
 		"img" => "img/project3.jpg",
 		"tags" => "Javascript",
-		"link" => "http://codepen.io/Cheshire89/pen/RaNVOq"
+		"link" => "http://codepen.io/Cheshire89/pen/RaNVOq/"
+		),
+	$toDoList = array(
+		"title" => "Weather App",
+		"img" => "img/project5.jpg",
+		"tags" => "AJAX, jQuery, BootStrap",
+		"link" => "http://codepen.io/Cheshire89/full/grRjLB/"
 		),
 	$funnyQuotes = array(
 		"title" => "Random Fun Quotes",
 		"img" => "img/project4.jpg",
 		"tags" => "Javascript, jQuery",
-		"link" => "http://codepen.io/Cheshire89/pen/JGRaJg"
+		"link" => "http://codepen.io/Cheshire89/pen/JGRaJg/"
 		)
 	);
 
