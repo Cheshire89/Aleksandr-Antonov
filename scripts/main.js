@@ -1,5 +1,4 @@
 
-
 /*******************|Smooth Scroller|**********************/
 
 var ss = {
@@ -236,5 +235,7 @@ if($("#set").length){ // check if success message is present
   $("#hire").focus(); //focus on it
 }
 /************************************************************************/
-
+$('body').stellar({
+  parallaxBackgrounds: true
+});
 

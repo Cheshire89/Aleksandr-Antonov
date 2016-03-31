@@ -20,7 +20,7 @@
   top: 0;
   left: 0;
   background: no-repeat center right fixed url(../img/background.jpg);
-  height: 100vh;
+  height: 100%;
   display: inline-block;
 
   -webkit-backgroun-size: 100%; 
@@ -85,6 +85,7 @@
   
 body{
    background: url("../img/background1.jpg") no-repeat center fixed; 
+   background-position:0 0;
    width: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
