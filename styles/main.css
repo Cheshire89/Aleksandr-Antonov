@@ -20,7 +20,6 @@
   top: 0;
   left: 0;
   background: no-repeat center right fixed url(../img/background.jpg);
-  height: 100%;
   display: inline-block;
 
   -webkit-backgroun-size: 100%; 
@@ -706,7 +705,7 @@ form input[type="submit"]:focus {
   display: none;
 }
 
-#email_btn{
+#email_btn,{
   display: none;
 }
 
@@ -1020,7 +1019,7 @@ section, footer{
 
 /**********************|Contact|*********************/
 
-#email_btn{
+#email_btn, #github_btn{
   width: 15%;
   display: block;
   text-align: center;

@@ -14,6 +14,7 @@ include("php/data.php");
 <meta name="keywords" content="Aleksandr Antonov, Interactive Resume, PHP programmer, Web developer, Interactive CV, Resume, HRMatches, PHP, Javascript, OOP">
 <meta name="robots" content="index, follow">
 <meta name="revisit-after" content="7 days">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 <link rel="alternate" href="http://aleksandrantonov.com" hreflang="en-us" />
 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 <link rel="icon" href="img/favicon.ico" type="image/x-icon">
@@ -181,7 +182,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	    		echo '</a></div>';
     		}
     	?>
+
     	</div>
+    	<a href="https://github.com/Cheshire89" id="github_btn" class="btn green"><i class="fa fa-github" aria-hidden="true"></i> | Github Projects</a>
    	</div>
    	</section>
    	<section id="five">
