@@ -161,6 +161,12 @@ $projects = array(
 		"tags" => "AJAX, jQuery, BootStrap",
 		"link" => "http://codepen.io/Cheshire89/full/grRjLB/"
 		),
+	$toDoAngular = array(
+		"title" => "Task App Angular",
+		"img" => "img/project6.jpg",
+		"tags" => "Angularjs, Javascript",
+		"link" => "projects/TodoApp/todoApp.html"
+		),
 	$funnyQuotes = array(
 		"title" => "Random Fun Quotes",
 		"img" => "img/project4.jpg",
