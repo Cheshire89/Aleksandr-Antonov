@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: 
+
+Sitemap: http://sloanegalleryofart.com/docs/sitemap.xml

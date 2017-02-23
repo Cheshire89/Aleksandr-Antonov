@@ -1,0 +1,21 @@
+@mixin bg-cover(){
+	$extentions: '-webkit-','-moz-','-o-','';
+	@each $ext in $extentions{
+		#{$ext}background-size:100%;
+		#{$ext}background-size:cover;
+	}
+}
+
+@mixin column-count($count:1){
+	$extentions: '-webkit-','-moz-','';
+	@each $ext in $extentions{
+		#{$ext}column-count: $count;
+	}
+}
+
+@mixin transition($what:all, $time:0.5s, $type:ease-in-out){
+	$extentions: '-webkit-','-moz-','-o-','-ms-','';
+	@each $ext in $extentions{
+		#{$ext}transition: $what $time ;
+	}
+}

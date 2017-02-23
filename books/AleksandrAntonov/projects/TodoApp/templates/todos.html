@@ -1,0 +1,22 @@
+<div class="list">
+	<div class="global">
+		<a href="" ng-click="addTodo()" class="btn blue">+ New Task</a>
+	</div>
+	<div class="global">
+		<a href="" ng-click="deleteCompleted()" class="btn green">- Delete Completed</a>
+	</div>
+	<div class="global">
+		<a href="" ng-click="deleteAllTodos()" class="btn red">- Delete All </a>
+	</div>
+	<div class="item" ng-class="{'editing-item': editing, 'edited':todo.edited, 'completed':todo.completed}" ng-repeat="todo in todos | orderBy: 'completed'" ng-init="todo.completed = false">
+		<input ng-model="todo.completed" type="checkbox"/>
+		<span ng-click="todo.completed = !todo.completed; todo.edited=true"></span>
+		<label ng-hide="editing" class="editing-label" ng-click="editing = true">{{todo.name}}</label>
+		<input ng-change="todo.edited = true" ng-blur="editing = false" ng-show="editing" ng-model="todo.name" type="text" class="editing-label" />
+		<div class="actions">
+			<!-- <a href="" ng-click=" editing = !editing" class="btn green">edit</a> -->
+			<a href="" ng-click="saveTodos()" class="btn green">save</a>
+			<a href="" ng-click="deleteTodo(todo, $index)" class="btn red">delete</a>
+		</div>
+	</div>
+</div>
