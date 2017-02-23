@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
+<<<<<<< HEAD
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
@@ -1930,5 +1931,16 @@
   <loc>http://sloanegalleryofart.com/contact/306</loc>
   <changefreq>daily</changefreq>
   <priority>0.41</priority>
+=======
+xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.smallseotools.com -->
+<url>
+  <loc>http://aleksandrantonov.com</loc>
+  <changefreq>monthly</changefreq>
+  <priority>1</priority>
+>>>>>>> feee9962d92851626ef13811216ef0ef22a55592
 </url>
 </urlset>
